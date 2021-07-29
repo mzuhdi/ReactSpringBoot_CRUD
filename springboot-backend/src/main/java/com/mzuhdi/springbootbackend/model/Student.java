@@ -3,8 +3,8 @@ package com.mzuhdi.springbootbackend.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "employees")
-public class Employee {
+@Table(name = "student")
+public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,11 +19,12 @@ public class Employee {
     @Column(name = "email_id")
     private String emailId;
 
-    public Employee(){
+    public Student(){
 
     }
 
-    public Employee(String firstName, String lastName, String emailId) {
+    public Student(String firstName, String lastName, String emailId) {
+        super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailId = emailId;
